@@ -1,3 +1,17 @@
+Theres an insane amount of shit inside this readme that hurts my brain 
+ ### Hello im daedreus, I decided to make a ton of edits to diskette and decided to make my edits public
+ Whats different?
+ - Added the colour customization inside so users dont need to add it themself.
+ - CHanged colours 
+   - Backgroudn is now a deep blue/black
+   - Accents are a light blue
+   - border hovers are a light purple 
+ - Moved the settings mute and deafen buttons under your server list(s) Works with better folders plugins
+ - Centered the profile icon
+
+
+
+
 <p align="center">
   <img src="https://github.com/SlippingGittys-Discord-Themes/Diskette/assets/76500838/100f2a9e-0da5-4c91-ae34-7d349be7a0d3" />
 </p>
