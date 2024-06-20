@@ -2,8 +2,8 @@ Theres an insane amount of shit inside this readme that hurts my brain
  ### Hello im daedreus, I decided to make a ton of edits to diskette and decided to make my edits public
  Whats different?
  - Added the colour customization inside so users dont need to add it themself.
- - CHanged colours 
-   - Backgroudn is now a deep blue/black
+ - Changed colours 
+   - Background is now a deep blue/black
    - Accents are a light blue
    - border hovers are a light purple 
  - Moved the settings mute and deafen buttons under your server list(s) Works with better folders plugins
