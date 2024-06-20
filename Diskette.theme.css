@@ -1,7 +1,8 @@
 /**
+ORIGINAL AUTHOR AND INFORMATION
  * @name Diskette
- * @author vozercozer
- * @version 06.24-v7b
+ * @author vozy
+ * @version 06.24-v5b
  * @description A terminally-ill Discord theme inspired by the Spotify-Tui theme
 **/
 
@@ -9,24 +10,21 @@
 
 Version notes:
 
- ############# Version 06.24 Beta 7 ################
+ ############# Version 06.24 Beta 8 ################
 
-- Major tweaks added in this version:
-    - When making or using a Color Scheme, you can easily choose to add & customize the border of the entire window.
-     - Further information will be added to the Wiki on how to use this.
-       - Users will be able to disable this border if they find it intrusive.
-
-- Minor tweaks made for consistency:
-    - Default padding is changed from 30px to 10px.
-    - Author name is changed to my usual handle
-    - Color Schemes comment is more uniform with others
-    - Working after the recent class re-roll
-
-- Authors Notes:
-    - Considering removing the Radial Status snipit from the base theme, and making it an option.
-    - I want to further de-couple this theme from NoTheme, for better customization flexability.
-    - The README would be a better place to put this, right? I should fix that later LOL.
-
+- Out of Alpha stages, into Beta stages. 
+   1. This is mostly ready usage but not completely finished
+   2. Somethings are broken, some things aren't covered.
+   3. Please report everything you see wrong. I also accept pull requests most of the time.
+   4. Penis. Penis Penis Penis. Peeeenis. Penis. LMAO. PENIS. COCK! BALLS!!! BAllls!!!! ballsalaslLl!!! 
+Daedreus notes
+ - Added the colour customization inside so users dont need to add it themself.
+ - CHanged colours 
+   - Backgroudn is now a deep blue/black
+   - Accents are a light blue
+   - border hovers are a light purple 
+ - Moved the settings mute and deafen buttons under your server list(s) Works with better folders plugins
+ - Centered the profile icon
  ----------------------------------------------------------------------------------------------------------------------- */
 
 /*
@@ -48,9 +46,10 @@ Version notes:
 @import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/source files/everything else/selectors.css');
 
 /* -- ▲▲▲ DO NOT TOUCH ▲▲▲ -------------------------------------------------------------------------------------------------------------------- */
+/* Background Colors */
+/* x-x-x-x-x Font x-x-x-x-x */
+@import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Fonts/DM Mono.css');
 
-/* 🖌🖌🖌 Color Scheme 🖌🖌🖌 */
-@import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Color Schemes/Default.css');
 
 /* [][][][][][] Fancy Window Title Headers [][][][][][] */
 @import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/source files/everything else/border headers.css');
@@ -58,15 +57,90 @@ Version notes:
 /* 3-2-1-c-b-a Icons a-b-c-1-2-3 */
 @import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Icons/Clarity.css');
 
-/* x-x-x-x-x Font x-x-x-x-x */
-@import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Fonts/DM Mono.css');
+
 
 /* - [] x WinButtons - [] x */
 @import url('https://slippinggittys-discord-themes.github.io//Diskette/User/Vozy/Documents/source files/everything else/winbuttons.css');
 
-/* >>>>>> Window Padding + Border <<<<<<< */
+/* >>>>>> Window Padding <<<<<<< */
 :root {
-  --pad: 30px;
-  --showBorder: hidden; /* If your Color Scheme supports this feautre *and* you're on Windows, erase "hidden" */
+  --pad: 20px;
 }
 
+:root {
+  --projectCabBackground: rgb(0, 0, 0);
+  --projectCabBackground2: var(--projectCabBackground);
+  --projectCabTextBackground: var(--projectCabBackground);
+  --projectCabTitleBar: var(--projectCabBackground);
+  --projectCabHover: var(--accent-focused);
+}
+
+/* Accents */
+:root {
+  --accent: rgb(71, 178, 202);
+  --accent-hover: rgb(124, 124, 124, 0.977);
+  --accent-selected: rgb(49, 49, 49);
+  --accent-focused: rgb(49, 49, 49);
+  --borders: rgb(52, 52, 52) 1px solid;
+  --bordersH: rgb(154, 115, 227);
+  --bordersW: rgb(154, 115, 227);
+}
+
+/* /* Color Scheme */
+@import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Color Schemes/Default.css');
+/* removes the "centered" look for the settings menu  */
+[class*="sidebarRegion"] {
+  flex: none;
+}
+
+[class*="item"] {
+  padding: unset;
+}
+
+[class*="contentColumn"] {
+  max-width: none;
+}
+
+/* Move settings under server list(s) */
+
+[class*="panels_"] [class*="avatarWrapper_"] + div {
+  position: fixed;
+  left: 0;
+  bottom: 12px;
+  align-items: center;
+  margin-left: 30px;
+  height: 100px;
+}
+
+.guilds_a4d4d9 {
+  margin-bottom: 50px;
+}
+/* Center profile button */
+[class*="panels_"] [class*="avatarWrapper_"]{
+    position: fixed;
+  left: 230px;
+  bottom: 220;
+  align-items: center;
+  margin-left: 0;
+  
+}
+/* Pin home button */
+.tutorialContainer__890ea {
+  position: fixed; top: 22px;
+  z-index: 1;
+  background: linear-gradient(var(--background-tertiary) 100%, transparent);
+}
+.guilds__2b93a .scroller__3d071 { contain: none !important; padding-top: 60px;}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+  bottom: 10px;
+  left: 10px; 
+  right: unset;
+  border-radius: 0px 8px 0px 0px;
+  background-color: var(--channeltextarea-background);
+  > button[class^=barButtonMain] {
+    flex: 0 0 auto;
+    display: none;
+  }
+}
