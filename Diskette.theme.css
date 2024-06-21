@@ -43,10 +43,9 @@ Daedreus notes
 @import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/source files/base.css');
 
 /*  🔌🔌🔌 Diskette Plugin - Do NOT Eject 🔌🔌🔌 */
-@import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/source files/everything else/selectors.css');
+@import url('https://raw.githubusercontent.com/drakosoldier298/DisketteDae/main/User/Vozy/Documents/source files/everything else/selectors.css');
 
 /* -- ▲▲▲ DO NOT TOUCH ▲▲▲ -------------------------------------------------------------------------------------------------------------------- */
-/* Background Colors */
 /* x-x-x-x-x Font x-x-x-x-x */
 @import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Fonts/DM Mono.css');
 
@@ -88,6 +87,7 @@ Daedreus notes
 
 /* /* Color Scheme */
 @import url('https://slippinggittys-discord-themes.github.io/Diskette/User/Vozy/Documents/goodies/Color Schemes/Default.css');
+
 /* removes the "centered" look for the settings menu  */
 [class*="sidebarRegion"] {
   flex: none;
@@ -100,21 +100,30 @@ Daedreus notes
 [class*="contentColumn"] {
   max-width: none;
 }
+/* fix the activity borders */
 
+[class*="panels_"] [class*="wrapper_"]{
+  border: var(--borders);
+  max-height: 200px;
+  max-width: 228px;
+  left: 5px;
+}
 /* Move settings under server list(s) */
 
 [class*="panels_"] [class*="avatarWrapper_"] + div {
   position: fixed;
-  left: 0;
-  bottom: 12px;
+  left: 0px;
+  bottom: 40px;
   align-items: center;
   margin-left: 30px;
-  height: 100px;
+  height: 50px;
+  border: var(--borders);
 }
 
 .guilds_a4d4d9 {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
+
 /* Center profile button */
 [class*="panels_"] [class*="avatarWrapper_"]{
     position: fixed;
@@ -124,6 +133,7 @@ Daedreus notes
   margin-left: 0;
   
 }
+
 /* Pin home button */
 .tutorialContainer__890ea {
   position: fixed; top: 22px;

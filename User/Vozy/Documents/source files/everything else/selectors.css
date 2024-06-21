@@ -19,7 +19,9 @@
 }
 
 /* Everything else done to modify NoTheme into this obamanation */
-
+[class*="panels_"] [class*="wrapper_"]:hover {
+   border-color: var(--bordersH);
+}
 .container_ee69e0 {
    border: var(--borders);
    margin: 0px 5px 1px 5px;
