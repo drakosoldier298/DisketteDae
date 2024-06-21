@@ -20,9 +20,9 @@
 
 /* Everything else done to modify NoTheme into this obamanation */
 /* New settings border */
-[class*="panels_"] [class*="wrapper_"]:hover {
+[class*="panels_"] [class*="avatarWrapper_"] + div:hover {
    border-color: var(--bordersH);
-}
+ }
 
 .container_ee69e0 {
    border: var(--borders);
