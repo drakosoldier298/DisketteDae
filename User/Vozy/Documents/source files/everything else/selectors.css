@@ -19,9 +19,11 @@
 }
 
 /* Everything else done to modify NoTheme into this obamanation */
+/* New settings border */
 [class*="panels_"] [class*="wrapper_"]:hover {
    border-color: var(--bordersH);
 }
+
 .container_ee69e0 {
    border: var(--borders);
    margin: 0px 5px 1px 5px;
@@ -94,7 +96,7 @@
 }
 
 /* THAT STUPID FUCKING USER BAR BULLSHIT FUCKING FUCK DICK FUCK FUCK SHIT FUCK DICK FUCK */
-.container_b2ca13 {
+[class*="panels_"] [class*="avatarWrapper_"] {
    border: var(--borders);
    margin: 7px 5px 16px 5px;
 }
